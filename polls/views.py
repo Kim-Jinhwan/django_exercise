@@ -17,6 +17,7 @@ def detail(request, question_id):
         raise Http404("Question does not exist")
     return render(request, 'polls/detail.html', {'question': question})
 
+
 def results(request, question_id):
     response = "You're looking at the results of question %s."
     return HttpResponse(response % question_id)
